@@ -82,10 +82,30 @@ export function Presentation({ children }: PresentationProps) {
         };
     }, []);
 
+    const touchStartX = useRef<number | null>(null);
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        if (touchStartX.current === null) return;
+        const touchEndX = e.changedTouches[0].clientX;
+        const diff = touchStartX.current - touchEndX;
+        if (diff > 50) {
+            nextSlide();
+        } else if (diff < -50) {
+            prevSlide();
+        }
+        touchStartX.current = null;
+    };
+
     return (
         <div
             ref={containerRef}
             className="relative w-screen h-screen bg-black text-white overflow-hidden font-sans"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
         >
             {/* Slides */}
             {React.Children.map(children, (child, index) => {
