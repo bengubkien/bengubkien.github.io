@@ -11,7 +11,7 @@ export function OutroSlide() {
 
     return (
         <div className="relative w-full h-full overflow-hidden">
-            <VideoBackground url="https://stream.mux.com/00qQnfNo7sSpn3pB1hYKkyeSDvxs01NxiQ3sr29uL3e028.m3u8" />
+            <VideoBackground url="https://cdn.dribbble.com/userupload/41499227/file/original-eda42fff4752ed00de7208085dd66f80.mp4" />
 
             {/* Changed to overflow-y-auto for mobile scrollability */}
             <div className="relative z-10 w-full h-full flex flex-col items-center justify-center p-[6%] text-center overflow-y-auto pb-[20%] md:pb-[6%]">

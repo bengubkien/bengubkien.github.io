@@ -31,7 +31,7 @@ export function ResearchSlide() {
 
     return (
         <div className="relative w-full h-full overflow-hidden">
-            <VideoBackground url="https://stream.mux.com/4IMYGcL01xjs7ek5ANO17JC4VQVUTsojZlnw4fXzwSxc.m3u8" />
+            <VideoBackground url="https://cdn.dribbble.com/userupload/18230555/file/original-4337707c6074fa00350d1f13a028d5bc.mp4" />
 
             {/* Dark scrim over video for contrast to match the serious flat aesthetic */}
             <div className="absolute inset-0 bg-black/60 z-[1]" />
