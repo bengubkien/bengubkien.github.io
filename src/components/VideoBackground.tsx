@@ -14,6 +14,13 @@ export function VideoBackground({ url }: VideoBackgroundProps) {
 
         let hls: Hls | null = null;
 
+        // If it's a native mp4/webm, stream it natively without hls.js
+        if (url.endsWith('.mp4') || url.endsWith('.webm')) {
+            video.src = url;
+            video.play().catch(e => console.error("Auto-play failed:", e));
+            return;
+        }
+
         if (Hls.isSupported()) {
             hls = new Hls({
                 enableWorker: true,

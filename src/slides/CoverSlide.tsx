@@ -4,7 +4,7 @@ import { VideoBackground } from '../components/VideoBackground';
 export function CoverSlide() {
     return (
         <div className="relative w-full h-full overflow-hidden">
-            <VideoBackground url="https://stream.mux.com/JNJEOYI6B3EffB9f5ZhpGbuxzc6gSyJcXaCBbCgZKRg.m3u8" />
+            <VideoBackground url="https://cdn.dribbble.com/userupload/19479288/file/original-2fe56320d01f1d5808904309aa3af385.mp4" />
 
             <div className="relative z-10 w-full h-full flex flex-col p-[4%]">
                 {/* Center Content */}

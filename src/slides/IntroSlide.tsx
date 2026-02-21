@@ -6,7 +6,7 @@ export function IntroSlide() {
 
     return (
         <div className="relative w-full h-full overflow-hidden">
-            <VideoBackground url="https://stream.mux.com/hUT6X11m1Vkw1QMxPOLgI761x2cfpi9bHFbi5cNg4014.m3u8" />
+            <VideoBackground url="https://cdn.dribbble.com/userupload/11189487/file/original-5987e1a5800867c8a3b8db60b53bb6c7.mp4" />
 
             <div className="relative z-10 w-full h-full flex flex-col justify-center p-[6%] overflow-y-auto pb-[20%] md:pb-[6%]">
                 <div className="flex flex-col items-start w-full max-w-[65%] md:max-w-[55%] mt-auto md:mt-0">
