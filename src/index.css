@@ -32,4 +32,24 @@
     background: linear-gradient(170deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 18%, transparent 40%);
     pointer-events: none;
   }
+
+  .card-glass {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(80px) saturate(1.5) brightness(1.05);
+    -webkit-backdrop-filter: blur(80px) saturate(1.5) brightness(1.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 24px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(170deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 18%, transparent 40%);
+    pointer-events: none;
+  }
 }
