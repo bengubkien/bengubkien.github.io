@@ -50,9 +50,9 @@ export function ResearchSlide() {
                 </div>
 
                 {/* Right Column: Timeline Grid */}
-                <div className="w-full md:w-[60%] relative flex-1 md:overflow-y-auto md:pr-[2%] custom-scrollbar">
+                <div className="w-full md:w-[60%] relative flex-1 md:overflow-y-auto md:pr-[2%] hide-scrollbar">
                     {/* Vertical Timeline Track */}
-                    <div className="absolute left-[12px] md:left-[15px] top-[24px] bottom-0 w-[1px] bg-gradient-to-b from-white/20 via-white/10 to-transparent" />
+                    <div className="absolute left-[12px] md:left-[15px] top-[24px] bottom-0 w-[1px] bg-white/20" />
 
                     <div className="flex flex-col gap-[clamp(24px,4vw,32px)] w-full py-[4%]">
                         {publications.map((pub, idx) => (
