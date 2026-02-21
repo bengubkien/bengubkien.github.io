@@ -1,69 +1,92 @@
 
 import { VideoBackground } from '../components/VideoBackground';
-import { BatteryWarning, Zap, Settings, Activity, Cpu } from 'lucide-react';
 
 export function ResearchSlide() {
-    const iconProps = {
-        size: "clamp(24px, 6vw, 40px)",
-        strokeWidth: 1.2
-    };
+    const publications = [
+        {
+            status: "PUBLISHED",
+            title: "Decoupled Adaptive Super-Twisting Control of Hybrid Energy Storage Systems for Electric Vehicles",
+            description: "Designed a decoupled adaptive super-twisting controller enabling independent regulation of battery and supercapacitor currents in electric vehicle hybrid energy storage, with finite-time convergence guarantees.",
+            tags: ["Adaptive Control", "Lyapunov", "Electric Vehicles"]
+        },
+        {
+            status: "PUBLISHED",
+            title: "Thermal Model Reduction for Real-Time BMS",
+            description: "Developed reduced-order Li-ion models via steady-state moment matching for accurate, real-time temperature estimation within computational limits.",
+            tags: ["Thermal Modeling", "Model Reduction", "BMS"]
+        },
+        {
+            status: "IN PROGRESS",
+            title: "Degradation-Aware Energy Management for Hybrid Energy Storage Systems: A Learning-Based Thermal-Optimal Approach",
+            description: "Combining Pontryagin's Minimum Principle with neural network approximation for a real-time energy management strategy that minimizes battery degradation while maintaining optimal thermal behavior.",
+            tags: ["Neural Networks", "PMP", "Degradation", "Thermal"]
+        },
+        {
+            status: "IN PROGRESS",
+            title: "Optimal Sensor Fusion for Hybrid Sensorless PMSM Control: A Variational Approach to HFI-STO Transition",
+            description: "Designing a variational framework for optimal fusion of high-frequency injection and sliding-mode observer estimates in sensorless PMSM drives, targeting seamless full-speed-range operation.",
+            tags: ["Sensor Fusion", "PMSM", "HFI", "Sensorless"]
+        }
+    ];
 
     return (
         <div className="relative w-full h-full overflow-hidden">
             <VideoBackground url="https://stream.mux.com/4IMYGcL01xjs7ek5ANO17JC4VQVUTsojZlnw4fXzwSxc.m3u8" />
 
-            {/* Dark scrim over video for contrast */}
-            <div className="absolute inset-0 bg-black/40 z-[1]" />
+            {/* Dark scrim over video for contrast to match the serious flat aesthetic */}
+            <div className="absolute inset-0 bg-black/60 z-[1]" />
 
-            <div className="relative z-10 w-full h-full flex flex-col p-[4%] pt-[6%] md:pt-[3%] overflow-y-auto pb-[20%] md:pb-[6%]">
-                {/* Centered Title */}
-                <div className="w-full text-center mt-[4%] md:mt-[1%] mb-[6%] md:mb-[3%] shrink-0">
-                    <h2 className="text-[clamp(28px,7vw,64px)] md:text-[clamp(28px,4vw,64px)] tracking-[-0.02em] leading-tight font-bold">
-                        Published &amp; Pending Research
+            <div className="relative z-10 w-full h-full flex flex-col md:flex-row p-[6%] overflow-y-auto md:overflow-hidden pb-[20%] md:pb-[6%] gap-[8%] md:gap-[4%]">
+
+                {/* Left Column: Context Text */}
+                <div className="w-full md:w-[40%] flex flex-col shrink-0 h-fit md:sticky md:top-0 text-white mt-[8%] md:mt-[4%]">
+                    <h2 className="text-[clamp(32px,6vw,64px)] tracking-tight leading-[1.05] font-bold mb-[8%] md:mb-[6%]">
+                        Research &amp;<br />Publications
                     </h2>
+                    <p className="text-[clamp(14px,1.3vw,18px)] text-white/70 leading-[1.7] max-w-[95%]">
+                        My research lies at the intersection of modern nonlinear control theory and power electronics, strictly applied to the mobility sector.
+                        I focus on developing mathematically rigorous, robust algorithms that maximize energy efficiency, hybrid storage longevity, and powertrain performance in electric vehicles without sacrificing computational feasibility or safety.
+                    </p>
                 </div>
 
-                {/* Card Grid */}
-                <div className="flex flex-col flex-1 px-[2%] gap-[clamp(12px,3vw,18px)] md:gap-[clamp(8px,1vw,18px)]">
-                    {/* Top Row */}
-                    <div className="flex-1 flex flex-col md:flex-row gap-[clamp(12px,3vw,18px)] md:gap-[clamp(8px,1vw,18px)] shrink-0 min-h-[min-content]">
-                        <div className="flex-1 card-glass rounded-2xl flex flex-col justify-end p-[clamp(16px,4vw,36px)] md:p-[clamp(20px,2vw,36px)] transition-all hover:-translate-y-1 hover:border-white/[0.22] duration-300 group">
-                            <Zap className="text-white mb-[12px] md:mb-[clamp(12px,1.5vw,24px)]" style={{ width: iconProps.size, height: iconProps.size }} strokeWidth={iconProps.strokeWidth} />
-                            <span className="text-[10px] uppercase font-semibold tracking-widest text-white mb-2">Published</span>
-                            <h3 className="text-[clamp(18px,4.5vw,26px)] md:text-[clamp(16px,1.4vw,26px)] font-bold tracking-tight mb-[6px] group-hover:text-white transition-colors">Super-Twisting Control</h3>
-                            <p className="text-[clamp(13px,3vw,15px)] md:text-[clamp(12px,0.85vw,15px)] text-white/50 leading-snug">Sliding mode algorithm for current regulation in hybrid battery-supercapacitor systems.</p>
-                        </div>
+                {/* Right Column: Timeline Grid */}
+                <div className="w-full md:w-[60%] relative flex-1 md:overflow-y-auto md:pr-[2%] custom-scrollbar">
+                    {/* Vertical Timeline Track */}
+                    <div className="absolute left-[12px] md:left-[15px] top-[24px] bottom-0 w-[1px] bg-gradient-to-b from-white/20 via-white/10 to-transparent" />
 
-                        <div className="flex-1 card-glass rounded-2xl flex flex-col justify-end p-[clamp(16px,4vw,36px)] md:p-[clamp(20px,2vw,36px)] transition-all hover:-translate-y-1 hover:border-white/[0.22] duration-300 delay-75 group">
-                            <Activity className="text-white mb-[12px] md:mb-[clamp(12px,1.5vw,24px)]" style={{ width: iconProps.size, height: iconProps.size }} strokeWidth={iconProps.strokeWidth} />
-                            <span className="text-[10px] uppercase font-semibold tracking-widest text-white mb-2">Published</span>
-                            <h3 className="text-[clamp(18px,4.5vw,26px)] md:text-[clamp(16px,1.4vw,26px)] font-bold tracking-tight mb-[6px] group-hover:text-white transition-colors">Decoupled Adaptive HESS</h3>
-                            <p className="text-[clamp(13px,3vw,15px)] md:text-[clamp(12px,0.85vw,15px)] text-white/50 leading-snug">Independent regulation of battery/supercap currents with finite-time convergence guarantees.</p>
-                        </div>
+                    <div className="flex flex-col gap-[clamp(24px,4vw,32px)] w-full py-[4%]">
+                        {publications.map((pub, idx) => (
+                            <div key={idx} className="relative pl-[44px] md:pl-[64px] w-full">
+                                {/* Timeline Node / Dot */}
+                                <div className="absolute left-[8px] md:left-[11px] top-[20px] w-[9px] h-[9px] rounded-full bg-white ring-4 ring-black/80 z-10" />
 
-                        <div className="flex-1 card-glass rounded-2xl flex flex-col justify-end p-[clamp(16px,4vw,36px)] md:p-[clamp(20px,2vw,36px)] transition-all hover:-translate-y-1 hover:border-white/[0.22] duration-300 delay-150 group">
-                            <BatteryWarning className="text-white mb-[12px] md:mb-[clamp(12px,1.5vw,24px)]" style={{ width: iconProps.size, height: iconProps.size }} strokeWidth={iconProps.strokeWidth} />
-                            <span className="text-[10px] uppercase font-semibold tracking-widest text-white mb-2">Published</span>
-                            <h3 className="text-[clamp(18px,4.5vw,26px)] md:text-[clamp(16px,1.4vw,26px)] font-bold tracking-tight mb-[6px] group-hover:text-white transition-colors">Thermal Model Reduction</h3>
-                            <p className="text-[clamp(13px,3vw,15px)] md:text-[clamp(12px,0.85vw,15px)] text-white/50 leading-snug">Reduced-order Li-ion models via steady-state moment matching for real-time BMS.</p>
-                        </div>
-                    </div>
+                                {/* Card Block */}
+                                <div className="bg-white/[0.03] border border-white/[0.08] backdrop-blur-3xl rounded-2xl p-[clamp(20px,3vw,32px)] transition-all duration-300 hover:bg-white/[0.05] hover:border-white/[0.15]">
+                                    <div className="text-[10px] md:text-[11px] font-bold tracking-[0.2em] text-white/60 mb-[16px] md:mb-[20px] uppercase">
+                                        {pub.status}
+                                    </div>
 
-                    {/* Bottom Row */}
-                    <div className="flex-1 flex flex-col md:flex-row gap-[clamp(12px,3vw,18px)] md:gap-[clamp(8px,1vw,18px)] shrink-0 min-h-[min-content]">
-                        <div className="flex-1 card-glass rounded-2xl flex flex-col justify-end p-[clamp(16px,4vw,36px)] md:p-[clamp(20px,2vw,36px)] transition-all hover:-translate-y-1 hover:border-white/[0.22] duration-300 delay-200 group">
-                            <Settings className="text-white/40 mb-[12px] md:mb-[clamp(12px,1.5vw,24px)]" style={{ width: iconProps.size, height: iconProps.size }} strokeWidth={iconProps.strokeWidth} />
-                            <span className="text-[10px] uppercase font-semibold tracking-widest text-white/40 mb-2">In Progress</span>
-                            <h3 className="text-[clamp(18px,4.5vw,26px)] md:text-[clamp(16px,1.4vw,26px)] font-bold tracking-tight mb-[6px] group-hover:text-white transition-colors">Degradation-Aware EMS</h3>
-                            <p className="text-[clamp(13px,3vw,15px)] md:text-[clamp(12px,0.85vw,15px)] text-white/50 leading-snug max-w-[85%]">Combining Pontryagin's Minimum Principle with NN approximation for minimal battery degradation.</p>
-                        </div>
+                                    <h3 className="text-[clamp(16px,2vw,22px)] font-bold text-white leading-[1.4] mb-[12px] md:mb-[16px]">
+                                        {pub.title}
+                                    </h3>
 
-                        <div className="flex-1 card-glass rounded-2xl flex flex-col justify-end p-[clamp(16px,4vw,36px)] md:p-[clamp(20px,2vw,36px)] transition-all hover:-translate-y-1 hover:border-white/[0.22] duration-300 delay-300 group">
-                            <Cpu className="text-white/40 mb-[12px] md:mb-[clamp(12px,1.5vw,24px)]" style={{ width: iconProps.size, height: iconProps.size }} strokeWidth={iconProps.strokeWidth} />
-                            <span className="text-[10px] uppercase font-semibold tracking-widest text-white/40 mb-2">In Progress</span>
-                            <h3 className="text-[clamp(18px,4.5vw,26px)] md:text-[clamp(16px,1.4vw,26px)] font-bold tracking-tight mb-[6px] group-hover:text-white transition-colors">Optimal Sensor Fusion</h3>
-                            <p className="text-[clamp(13px,3vw,15px)] md:text-[clamp(12px,0.85vw,15px)] text-white/50 leading-snug max-w-[85%]">Variational framework for fusing HFI and STO estimates in sensorless PMSM drives.</p>
-                        </div>
+                                    <p className="text-[clamp(13px,1.2vw,15px)] text-white/60 leading-[1.6] mb-[20px] md:mb-[24px]">
+                                        {pub.description}
+                                    </p>
+
+                                    <div className="flex flex-wrap gap-[8px] md:gap-[10px]">
+                                        {pub.tags.map(t => (
+                                            <span
+                                                key={t}
+                                                className="px-[12px] py-[6px] md:px-[14px] md:py-[8px] rounded-lg border border-white/[0.08] text-white/50 text-[10px] md:text-[11px] font-medium tracking-wide"
+                                            >
+                                                {t}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
