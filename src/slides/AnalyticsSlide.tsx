@@ -38,6 +38,16 @@ export function ResearchSlide() {
             doi: "https://doi.org/10.1016/example2"
         },
         {
+            status: "PUBLISHED",
+            title: "Analysis and Assessment of Hybrid Topologies for Energy Storage Systems Oriented for Electric Vehicles",
+            description: "Experimental analysis of hybrid supercapacitor/battery topologies with tailored control strategies to overcome the contrasting limitations of individual energy storage devices in EV applications.",
+            tags: ["Hybrid Storage", "Supercapacitors", "Topologies", "Renewable Energy"],
+            abstract: "Hybrid energy storage systems consist of two or more types of energy storage technologies, usually including batteries and supercapacitors. The complementary characteristics of these hybrid systems make them outperform any individual energy storage device, depending on the energy requirements of the application in different scenarios or under certain conditions. This work introduces a variety of different energy storage systems, while later on different topologies composed of supercapacitors and an energy-dense device are experimentally analyzed to solve their contrasting limitations. Additionally, a control strategy is implemented in each topology to regulate energy distribution, enhancing system performance under varying load conditions. Finally, the results are presented and discussed, validating the effectiveness of the proposed hybrid topologies in mitigating the limitations of individual energy storage devices.",
+            year: "2025",
+            journal: "Clean Energy Science and Technology, Vol. 3, Issue 1",
+            doi: "https://doi.org/10.18686/cest314"
+        },
+        {
             status: "IN PROGRESS",
             title: "Degradation-Aware Energy Management for Hybrid Energy Storage Systems: A Learning-Based Thermal-Optimal Approach",
             description: "Combining Pontryagin's Minimum Principle with neural network approximation for a real-time energy management strategy that minimizes battery degradation while maintaining optimal thermal behavior.",
@@ -97,10 +107,10 @@ export function ResearchSlide() {
                                     <div
                                         onClick={() => setExpandedIndex(isExpanded ? null : idx)}
                                         className={`bg-white/[0.03] backdrop-blur-3xl rounded-2xl p-[clamp(20px,3vw,32px)] transition-all duration-500 cursor-pointer overflow-hidden border ${isExpanded
-                                                ? 'border-white/[0.2] shadow-[0_8px_32px_rgba(0,0,0,0.5)] scale-[1.02] bg-white/[0.06]'
-                                                : isDimmed
-                                                    ? 'border-white/[0.04] opacity-40 hover:opacity-60 scale-[0.98]'
-                                                    : 'border-white/[0.08] hover:bg-white/[0.05] hover:border-white/[0.15]'
+                                            ? 'border-white/[0.2] shadow-[0_8px_32px_rgba(0,0,0,0.5)] scale-[1.02] bg-white/[0.06]'
+                                            : isDimmed
+                                                ? 'border-white/[0.04] opacity-40 hover:opacity-60 scale-[0.98]'
+                                                : 'border-white/[0.08] hover:bg-white/[0.05] hover:border-white/[0.15]'
                                             }`}
                                     >
                                         <div className="text-[10px] md:text-[11px] font-bold tracking-[0.2em] text-white/60 mb-[16px] md:mb-[20px] uppercase flex items-center">
@@ -135,8 +145,8 @@ export function ResearchSlide() {
                                         {/* Expandable Content (Accordion) */}
                                         <div
                                             className={`grid transition-all duration-500 ease-in-out ${isExpanded
-                                                    ? 'grid-rows-[1fr] opacity-100 mt-[24px] md:mt-[32px] pt-[24px] md:pt-[32px] border-t border-white/10'
-                                                    : 'grid-rows-[0fr] opacity-0 mt-0 pt-0 border-t border-transparent'
+                                                ? 'grid-rows-[1fr] opacity-100 mt-[24px] md:mt-[32px] pt-[24px] md:pt-[32px] border-t border-white/10'
+                                                : 'grid-rows-[0fr] opacity-0 mt-0 pt-0 border-t border-transparent'
                                                 }`}
                                         >
                                             <div className="overflow-hidden min-h-0">
