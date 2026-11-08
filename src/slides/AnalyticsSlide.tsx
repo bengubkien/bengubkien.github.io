@@ -25,7 +25,7 @@ export function ResearchSlide() {
             abstract: "Hybrid energy storage systems consist of two or more types of energy storage technologies, usually including batteries and supercapacitors. The complementary characteristics of these hybrid systems make them outperform any individual energy storage device, depending on the energy requirements of the application in different scenarios or under certain conditions. This work introduces a variety of different energy storage systems, while later on different topologies composed of supercapacitors and an energy-dense device are experimentally analyzed to solve their contrasting limitations. Additionally, a control strategy is implemented in each topology to regulate energy distribution, enhancing system performance under varying load conditions. Finally, the results are presented and discussed, validating the effectiveness of the proposed hybrid topologies in mitigating the limitations of individual energy storage devices.",
             year: "2025",
             journal: "Clean Energy Science and Technology, Vol. 3, Issue 1",
-            doi: "https://doi.org/10.18686/cest314"
+            doi: "https://cest.usp-pl.com/index.php/cest/article/view/314"
         },
         {
             status: "ACCEPTED",
@@ -34,7 +34,7 @@ export function ResearchSlide() {
             tags: ["Thermal Modeling", "Model Reduction", "Moment Matching", "LiFePO4"],
             abstract: "Real-time energy management in electric vehicle hybrid energy storage systems requires accurate, low-order thermal models to enforce safety constraints and preserve battery life. High-fidelity distributed models are computationally too complex for embedded controllers, while lumped models neglect critical cell-to-cell temperature gradients. This paper presents a systematic reduction of a generalized 2D distributed 2-RC thermal model of an NxM LiFePO4 battery module, based on model reduction by steady-state moment matching. Applied to a 192-state model of a 96-cell (8x12) module, the method yields a 5-state reduced-order model that preserves the steady-state response and the dominant thermal modes of the full-order model, achieving a relative H-infinity error of 0.13% and tracking errors below 0.1 degrees Celsius over a standardized drive cycle. The resulting 97.4% reduction in model order makes the model suitable for real-time control algorithms such as Equivalent Consumption Minimization Strategy or Model Predictive Control.",
             year: "2026",
-            journal: "URUCON — accepted, publication pending"
+            journal: "IEEE URUCON 2026 (accepted, publication pending)"
         }
     ];
 
