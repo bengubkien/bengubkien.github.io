@@ -19,27 +19,7 @@ export function ResearchSlide() {
     const publications: Publication[] = [
         {
             status: "PUBLISHED",
-            title: "Decoupled Adaptive Super-Twisting Control of Hybrid Energy Storage Systems for Electric Vehicles",
-            description: "Designed a decoupled adaptive super-twisting controller enabling independent regulation of battery and supercapacitor currents in electric vehicle hybrid energy storage, with finite-time convergence guarantees.",
-            tags: ["Adaptive Control", "Lyapunov", "Electric Vehicles"],
-            abstract: "This paper proposes a decoupled adaptive super-twisting sliding mode controller for hybrid energy storage systems in electric vehicles. The controller independently regulates both battery and supercapacitor currents through separate control channels, achieving finite-time convergence while rejecting matched and unmatched disturbances. Lyapunov stability analysis confirms the robustness of the approach under parametric uncertainty and load variations.",
-            year: "2024",
-            journal: "Journal of Power Sources",
-            doi: "https://doi.org/10.1016/example1"
-        },
-        {
-            status: "PUBLISHED",
-            title: "Thermal Model Reduction for Real-Time BMS",
-            description: "Developed reduced-order Li-ion models via steady-state moment matching for accurate, real-time temperature estimation within computational limits.",
-            tags: ["Thermal Modeling", "Model Reduction", "BMS"],
-            abstract: "We present a model order reduction technique based on steady-state moment matching for lithium-ion battery thermal dynamics. The reduced-order model preserves key thermal behavior while dramatically lowering computational cost, making it suitable for deployment in embedded battery management systems. Validation against full-order electrochemical-thermal models demonstrates high fidelity across diverse operating conditions.",
-            year: "2024",
-            journal: "Applied Thermal Engineering",
-            doi: "https://doi.org/10.1016/example2"
-        },
-        {
-            status: "PUBLISHED",
-            title: "Analysis and Assessment of Hybrid Topologies for Energy Storage Systems Oriented for Electric Vehicles",
+            title: "Analysis and Assessment of Hybrid Topologies for Energy Storage Systems Oriented for Electric Vehicles: An Experimental Case Study on Supercapacitors and a High Energy Density Device",
             description: "Experimental analysis of hybrid supercapacitor/battery topologies with tailored control strategies to overcome the contrasting limitations of individual energy storage devices in EV applications.",
             tags: ["Hybrid Storage", "Supercapacitors", "Topologies", "Renewable Energy"],
             abstract: "Hybrid energy storage systems consist of two or more types of energy storage technologies, usually including batteries and supercapacitors. The complementary characteristics of these hybrid systems make them outperform any individual energy storage device, depending on the energy requirements of the application in different scenarios or under certain conditions. This work introduces a variety of different energy storage systems, while later on different topologies composed of supercapacitors and an energy-dense device are experimentally analyzed to solve their contrasting limitations. Additionally, a control strategy is implemented in each topology to regulate energy distribution, enhancing system performance under varying load conditions. Finally, the results are presented and discussed, validating the effectiveness of the proposed hybrid topologies in mitigating the limitations of individual energy storage devices.",
@@ -48,22 +28,13 @@ export function ResearchSlide() {
             doi: "https://doi.org/10.18686/cest314"
         },
         {
-            status: "IN PROGRESS",
-            title: "Degradation-Aware Energy Management for Hybrid Energy Storage Systems: A Learning-Based Thermal-Optimal Approach",
-            description: "Combining Pontryagin's Minimum Principle with neural network approximation for a real-time energy management strategy that minimizes battery degradation while maintaining optimal thermal behavior.",
-            tags: ["Neural Networks", "PMP", "Degradation", "Thermal"],
-            abstract: "This work formulates the energy management problem for hybrid energy storage systems as a multi-objective optimal control problem. Pontryagin's Minimum Principle provides the theoretical framework, while a neural network approximates the resulting co-state dynamics for real-time implementation. The strategy explicitly accounts for battery degradation mechanisms and thermal constraints, achieving a balance between performance, longevity, and computational feasibility.",
-            year: "2025",
-            journal: "In preparation"
-        },
-        {
-            status: "IN PROGRESS",
-            title: "Optimal Sensor Fusion for Hybrid Sensorless PMSM Control: A Variational Approach to HFI-STO Transition",
-            description: "Designing a variational framework for optimal fusion of high-frequency injection and sliding-mode observer estimates in sensorless PMSM drives, targeting seamless full-speed-range operation.",
-            tags: ["Sensor Fusion", "PMSM", "HFI", "Sensorless"],
-            abstract: "This paper introduces a variational optimization framework for fusing high-frequency injection (HFI) and sliding-mode observer (STO) position estimates in sensorless permanent magnet synchronous motor drives. The approach eliminates the abrupt handoff between low-speed and high-speed estimation methods, instead computing an optimal, continuously weighted fusion across the entire speed range. Simulation and experimental results demonstrate smooth transitions and improved position estimation accuracy.",
-            year: "2025",
-            journal: "In preparation"
+            status: "ACCEPTED",
+            title: "Control-Oriented Thermal Model Reduction of LiFePO4 Battery Packs via Moment Matching",
+            description: "Reduced a 192-state distributed thermal model of a 96-cell LiFePO4 module to a 5-state control-oriented model (97.4% order reduction) via steady-state moment matching, with tracking errors below 0.1 °C over a standardized drive cycle.",
+            tags: ["Thermal Modeling", "Model Reduction", "Moment Matching", "LiFePO4"],
+            abstract: "Real-time energy management in electric vehicle hybrid energy storage systems requires accurate, low-order thermal models to enforce safety constraints and preserve battery life. High-fidelity distributed models are computationally too complex for embedded controllers, while lumped models neglect critical cell-to-cell temperature gradients. This paper presents a systematic reduction of a generalized 2D distributed 2-RC thermal model of an NxM LiFePO4 battery module, based on model reduction by steady-state moment matching. Applied to a 192-state model of a 96-cell (8x12) module, the method yields a 5-state reduced-order model that preserves the steady-state response and the dominant thermal modes of the full-order model, achieving a relative H-infinity error of 0.13% and tracking errors below 0.1 degrees Celsius over a standardized drive cycle. The resulting 97.4% reduction in model order makes the model suitable for real-time control algorithms such as Equivalent Consumption Minimization Strategy or Model Predictive Control.",
+            year: "2026",
+            journal: "URUCON — accepted, publication pending"
         }
     ];
 

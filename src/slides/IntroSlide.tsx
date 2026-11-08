@@ -20,7 +20,7 @@ export function IntroSlide() {
 
                     <div className="flex items-center gap-[clamp(16px,4vw,48px)] md:gap-[clamp(24px,3vw,48px)] mt-[24px] md:mt-[clamp(24px,2.5vw,40px)]">
                         <div className="flex flex-col">
-                            <span className="text-[clamp(32px,8vw,72px)] md:text-[clamp(36px,4vw,72px)] font-bold tracking-tight leading-none">5+</span>
+                            <span className="text-[clamp(32px,8vw,72px)] md:text-[clamp(36px,4vw,72px)] font-bold tracking-tight leading-none">2</span>
                             <span className="text-[clamp(10px,2vw,14px)] md:text-[clamp(11px,0.8vw,14px)] text-white/60 font-medium tracking-widest uppercase mt-1">Publications</span>
                         </div>
                         <div className="w-[1px] h-[clamp(28px,6vw,56px)] md:h-[clamp(32px,3vw,56px)] bg-white/15" />
